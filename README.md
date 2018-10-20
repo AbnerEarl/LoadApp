@@ -15,15 +15,15 @@
 
 1、首先下载容器app，也是主app，这个app可以独立运行，也就是普通的app应用程序，需要下载并安装，下载地址：
 
-    https://github.com/YouAreOnlyOne/LoadApp/blob/master/source/loadapp.apk。
+https://github.com/YouAreOnlyOne/LoadApp/blob/master/source/loadapp.apk。
     
-    安装之后，直接运行，但是只有简单的HelloWorld界面，点击“加载APP”也不会有什么反应，不能够跳转到其它的app，会提示“文件是否存在”。
+安装之后，直接运行，但是只有简单的HelloWorld界面，点击“加载APP”也不会有什么反应，不能够跳转到其它的app，会提示“文件是否存在”。
 
 2、下载另一个需要的app，这个app也可以独立安装，也是一个普通的app应用程序，可以安装也可以不安装（实现双开效果需要安装），但是要把安装包（apk文件）放到手机存储的根目录下面，下载地址：
 
-    https://github.com/YouAreOnlyOne/LoadApp/blob/master/source/develop.apk 。
+https://github.com/YouAreOnlyOne/LoadApp/blob/master/source/develop.apk 。
     
-    此时，重新进入主app，点击“加载APP”，就会把这个这一步下载的app加载进去。实现免安装使用。我们我们加载的这个app也是一个独立app，可以进行安装，安装之后就会达到容器里面加载了这个app，本身这个app又可以安装使用，达到应用双开的效果。
+此时，重新进入主app，点击“加载APP”，就会把这个这一步下载的app加载进去。实现免安装使用。我们我们加载的这个app也是一个独立app，可以进行安装，安装之后就会达到容器里面加载了这个app，本身这个app又可以安装使用，达到应用双开的效果。
     
 
 # 使用方法
@@ -57,11 +57,13 @@
     
  1.第一步，下载依赖的包：
  
-    https://github.com/YouAreOnlyOne/LoadApp/blob/master/source/standard-release.aar 。
-    https://github.com/YouAreOnlyOne/LoadApp/blob/master/source/develop-release.aar 。
-    https://github.com/YouAreOnlyOne/LoadApp/blob/master/source/app-release.aar 。
+https://github.com/YouAreOnlyOne/LoadApp/blob/master/source/standard-release.aar 。
+
+https://github.com/YouAreOnlyOne/LoadApp/blob/master/source/develop-release.aar 。
+
+https://github.com/YouAreOnlyOne/LoadApp/blob/master/source/app-release.aar 。
     
-    并放到项目的 libs 目录下面。
+并放到项目的 libs 目录下面。
     
  2.第二步,在app的build.gradle下添加如下依赖，注意，两个依赖是平级关系：
     
@@ -88,14 +90,6 @@
 1、Android环境中随便新建一个普通Android项目（注意添加上面的依赖），在任何一个Activity中，调用下面一行代码即可：
 
     LoadApp.loadApp(this,new File("app文件的路径"));
-
-	public class Caculator {
-    		public int caculate(){
-    	  		int i=0,j=100;
-      			return j/i;
-  		}
-	}
-
 
 
 ## 创建其它APP
@@ -124,15 +118,9 @@
 3、上面容器APP中，可以读取手机存储卡里面的app文件，也可以从服务器先下载到本地，然后再读取。总之只要活得需要加载的APP的文件路径就可以了。
 	
 	
-不会写文件下载的，可以参考一下下面的文章：
 
-OkHttp 、Retrofit 、Volley 、RxJava、Novate在Android中Web网络请求一行代码解决。
 
-https://blog.csdn.net/u014374009/article/details/82933127
 
-一行代码实现Ftp文件上传、文件下载、文件删除和进度监听的工具类的使用。
-
-https://blog.csdn.net/u014374009/article/details/82944107
 
  
  
@@ -152,6 +140,15 @@ https://blog.csdn.net/u014374009/article/details/82944107
  更新中……
  
 # 相关介绍
+
+
+OkHttp 、Retrofit 、Volley 、RxJava、Novate在Android中Web网络请求一行代码解决。
+
+https://blog.csdn.net/u014374009/article/details/82933127
+
+一行代码实现Ftp文件上传、文件下载、文件删除和进度监听的工具类的使用。
+
+https://blog.csdn.net/u014374009/article/details/82944107
 
 一行代码解决AndFix热修复和热跟更新问题，集成了阿里的开源库，修复程序的缺陷bug漏洞和功能页面等.
 
